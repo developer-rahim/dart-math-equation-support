@@ -1,16 +1,56 @@
-# math_equation_support_letex
+# dart-math-equation-support
 
-A new Flutter project.
+An MCQ practice app that renders mathematical equations properly.
+
+## Highlights
+
+- **`flutter_math_fork`** — renders LaTeX-style equations inline.
+- Questions fetched over the network with `dio` and a bearer token.
+- Loading, error and empty states handled explicitly.
+- HTML entities decoded with `html_unescape` for clean question text.
+
+## Tech Stack
+
+| Concern | Choice |
+|---|---|
+| UI | Flutter, Material |
+| Networking | `dio` |
+| Math rendering | `flutter_math_fork` |
+| Utilities | `html_unescape` |
+
+## Project Structure
+
+```
+lib/
+- `main.dart`
+```
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter `>= 3.16` (Dart `>= 3.2`)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/developer-rahim/dart-math-equation-support.git
+cd dart-math-equation-support
+flutter pub get
+flutter run
+```
+
+### Test
+
+```bash
+flutter test
+flutter analyze
+```
+
+## Notes
+
+The API base URL and token live in `lib/main.dart`. Move the token to `--dart-define` before sharing this repo — see the security note in the root PROFILE.md.
+
+## License
+
+Released under the MIT License.
